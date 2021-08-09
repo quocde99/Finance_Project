@@ -1,11 +1,10 @@
-import csv
 import os
 from datetime import datetime
 from faker import Faker
-from customer import Customer
-from Transaction import Transaction
-from jobGroup import Job
-from Employee import Employee
+from Object.customer import Customer
+from Object.Transaction import Transaction
+from Object.jobGroup import Job
+from Object.Employee import Employee
 import pyodbc
 import csv
 import pandas as pd
