@@ -11,14 +11,15 @@ class Customer:
         self.limit = arr_Limit[fake.random_int(0, 5)]
         # 0 male 1 female
         self.sex = fake.boolean()
-        self.name = self.genName()
+        self.firstname = self.genName()
+        self.lastname = fake.first_name()
         self.date_of_birth = fake.date_between(start_date='-60y', end_date='-18y')
         self.email = fake.email()
         self.phone_Number = fake.phone_number()
         self.job = fake.random_int(0, 7)
         # (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown)
         self.education = fake.random_int(1, 5)
-        self.address = fake.random_int(1, 1000)
+        self.address = fake.random_int(0,7)
     def genName(self):
         if(self.sex):
             return fake.first_name_female()
