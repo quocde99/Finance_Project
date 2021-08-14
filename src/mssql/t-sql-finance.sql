@@ -81,6 +81,14 @@ CREATE TABLE Transactions_Errors
 			 employeeID int,
 
 );
+-- handle info event
+create table SSIS_handling_table(
+EIGUID uniqueidentifier not null,
+PakageName varchar(50) not null,
+SourceName varchar(50) not null,
+EventInfo varchar(200) not null,
+Timelogged datetime not null default getdate()
+)
 -- Create View
 CREATE VIEW View_Transaction_Detail AS
 select t.transactionID,c.customerID,cast(YEAR(GETDATE())-YEAR(c.date_of_birth) as float) as age,(year(startDate)*10000+month(startDate)*100+day(startDate))as startDateKey,(year(endDate)*10000+month(endDate)*100+day(endDate))as endDateKey,percents*limit/100 as loan,education,abs(DATEDIFF(month,endDate,startDate)) as MonthReturn,(percents*limit)/(income_basic*12)as percentincome,j.income_basic
