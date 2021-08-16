@@ -1,12 +1,11 @@
--- Set up Warehouse
 -- Set up Database
+USE ROLE SYSADMIN;
 create database FINANCEDW;
 use FINANCEDW;
 CREATE SCHEMA "FINANCEDW"."FinanceDatawarehouse";
 Use SCHEMA "FINANCEDW"."FinanceDatawarehouse";
 -- set up table
 --DimJobs
-
 CREATE TABLE DimJobs (
 	JobsKey  int identity not null
 	-- attributes
@@ -86,7 +85,19 @@ from "FINANCEDW"."FinanceDatawarehouse"."FACTFINANCE" as F, "FINANCEDW"."Finance
 where F.CUSTOMERKEY=C.CUSTOMERKEY
 group by C.CUSTOMERID
 -- Create Trigger
-
 -- Set up Snowpipe
-
 -- Task
+-- Create account
+USE ROLE ACCOUNTADMIN;
+CREATE OR REPLACE USER longbv1 password='123456' default_role = mentor;
+CREATE OR REPLACE USER mainq2 password='123456' default_role = mentor;
+CREATE OR REPLACE ROLE mentor;
+GRANT ROLE mentor TO ROLE sysadmin;
+GRANT ROLE mentor TO USER longbv1;
+GRANT ROLE mentor TO USER mainq2;
+GRANT USAGE, MONITOR ON DATABASE FINANCEDW TO ROLE mentor;
+GRANT USAGE, MONITOR ON SCHEMA "FINANCEDW"."FinanceDatawarehouse" TO ROLE mentor;
+GRANT SELECT ON ALL TABLES IN SCHEMA "FINANCEDW"."FinanceDatawarehouse" TO ROLE mentor;
+GRANT MONITOR, OPERATE, USAGE ON WAREHOUSE COMPUTE_WH TO ROLE mentor;
+GRANT MONITOR ON ALL TASKS IN DATABASE FINANCEDW TO ROLE mentor;
+GRANT SELECT ON ALL VIEWS IN SCHEMA "FINANCEDW"."FinanceDatawarehouse" TO ROLE mentor;

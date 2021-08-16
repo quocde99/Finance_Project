@@ -1,4 +1,5 @@
 -- Set up Database OLTP Finance
+go
 create database FinanceDB
 go
 use FinanceDB
