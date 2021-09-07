@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="project2.NhatLQ3"
+  DTS:DTSID="{C49A2921-EB50-438E-A146-2B7238E9AA25}"
+  DTS:CreationName="ODBC">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Package::snowserver]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="uid=NhatLQ3;Dsn=PROJECT1;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASoaKdvoht0O02tf7F/hc5AAAAAACAAAAAAADZgAAwAAAABAAAABOBuvoRi5LWFCm60DjOnmFAAAAAASAAACgAAAAEAAAALjsG1+ibjTBlXRXN/4ArjJ4AAAARnf3yMrF+R8TO+a62ReFUCSdrtcDFOX8/E8xo4RstGuXLYDh7ULxRA8JN2QC74BW88U9UzppobQiNHSJ2caHWRemrkt4yuLwp1HiwNBPAFYx9lDGQt3r1PBks1PjROufRT8y3PomN5Qe6jBDtwAox3NPJlXMx8i4FAAAAOT5Lk2rKnFs2wNAZz+J7+ZTP/tO</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

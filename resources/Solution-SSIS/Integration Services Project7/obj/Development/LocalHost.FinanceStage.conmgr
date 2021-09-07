@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LocalHost.FinanceStage"
+  DTS:DTSID="{A9FE99B5-5D09-4378-A915-99B58616304C}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="InitialCatalog">@[User::FinanceStage]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Package::Servername]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=CVP00204895A\NHATKQ3FSOFT;Initial Catalog=FinanceStage;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{A9FE99B5-5D09-4378-A915-99B58616304C}LocalHost.FinanceStage;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Log.txt"
+  DTS:DTSID="{20D6A43F-044B-4FC8-8411-4AEB57B44B13}"
+  DTS:CreationName="FILE">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[User::logForder]+"\\Log.txt"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="C:\Users\NhatLQ3\Downloads\Finance_Project-master\Finance_Project-master\resources\Solution-SSIS\Log\Log.txt" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
