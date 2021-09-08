@@ -69,7 +69,7 @@ Data is generated based on Python script. The database (.csv flat files) will in
 5. Open [finance.sln](./resources/Solution-SSIS/finance.sln). In `Solution Explore`, right click on `Finance` and choice `Deploy`. 
    Next when you see `Select Destination`,fill your SQL servername in the box, hit `browse` and create `Project 2` path if not exit.
 
-6. Login into MSSQL and run [init_SQL.sql](./src/mssql/init_SQL.sql). 
+6. Login into MSSQL, change some variable necessary and run [init_SQL.sql](./src/mssql/init_SQL.sql). 
 7. Run [Snowpipe.sql](./src/snowflake/Snowpipe.sql),[init_snowflake.sql](./src/snowflake/init_snowflake.sql), [task_procedure.sql](./src/snowflake/task_procedure.sql) in https://lf68175.central-us.azure.snowflakecomputing.com/console with acc: NhatLQ3, passcode:Nhat123456
 8. Execute package finance.dtsx and start job in SQL server.
 9. We create [snowpipe.py](./src/snowpipe/snowpipe.py) to upload fact finance to snowflake and download data warehouse to local. Run:
