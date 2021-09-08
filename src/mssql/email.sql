@@ -1,4 +1,3 @@
-USE [msdb]
 -- Create a Database Mail profile
 IF 'Notifications' IN (SELECT [name] FROM [msdb].[dbo].[sysmail_profile])
 	EXECUTE msdb.dbo.sysmail_delete_profile_sp
@@ -40,31 +39,3 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
     @sequence_number = 1;  
 GO
 
-
-
--- Create Proxy
-USE [msdb]
-IF 'runcmd' IN (SELECT [name] FROM [msdb].[dbo].[sysproxies])
-	EXEC msdb.dbo.sp_delete_proxy @proxy_name=N'runcmd';
-
-GO
-EXEC msdb.dbo.sp_add_proxy @proxy_name=N'runcmd', @credential_name=N'runcmd', 
-		@enabled=1;
-
-USE msdb
-EXEC msdb.dbo.sp_grant_proxy_to_subsystem
-@proxy_name=N'runcmd',
-@subsystem_name='CmdExec' 
-GO
-EXEC msdb.dbo.sp_grant_proxy_to_subsystem
-@proxy_name=N'runcmd',
-@subsystem_name='ANALYSISQUERY'
-GO
-EXEC msdb.dbo.sp_grant_proxy_to_subsystem
-@proxy_name=N'runcmd',
-@subsystem_name='ANALYSISCOMMAND'
-GO
-EXEC msdb.dbo.sp_grant_proxy_to_subsystem
-@proxy_name=N'runcmd',
-@subsystem_name='Dts'
-GO
