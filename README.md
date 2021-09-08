@@ -76,7 +76,7 @@ Data is generated based on Python script. The database (.csv flat files) will in
    ```bash  
    python snowpipe.py
    ```
-11. PowerBI [project 2.pbix](.powerBI/project 2.pbix) to visualization data WH we build 
+10. PowerBI [project 2.pbix](.powerBI/project 2.pbix) to watch visualization data WH we build 
 
 ## V. Dashboard
 1. Overview : [here](https://app.powerbi.com/view?r=eyJrIjoiMThmNjQ5N2MtZDYyMy00YzE2LThlNjctOWMzNGEzMGY3ZjAzIiwidCI6ImYwMWU5MzBhLWI1MmUtNDJiMS1iNzBmLWE4ODgyYjVkMDQzYiIsImMiOjEwfQ%3D%3D&pageName=ReportSectionfd6c4f8a7b4196007673)
