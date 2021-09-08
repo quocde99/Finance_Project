@@ -55,6 +55,10 @@ Data is generated based on Python script. The database (.csv flat files) will in
    - Deploy environment on SSIS Solution link to SQL server
    - Run SSIS Solution
 7. Install packages for python snowpipe
+   Install requirement:
+   ```bash 
+pip install -r requirements.txt
+```
    - Installing the Python SDK `pip install snowflake-ingest`
    - Installing Python connector:
      + Check for Python version: `python --version`
