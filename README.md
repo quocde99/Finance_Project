@@ -81,7 +81,7 @@ Data is generated based on Python script. The database (.csv flat files) will in
 ## V. Dashboard
 1. Overview : [here](https://app.powerbi.com/view?r=eyJrIjoiMThmNjQ5N2MtZDYyMy00YzE2LThlNjctOWMzNGEzMGY3ZjAzIiwidCI6ImYwMWU5MzBhLWI1MmUtNDJiMS1iNzBmLWE4ODgyYjVkMDQzYiIsImMiOjEwfQ%3D%3D&pageName=ReportSectionfd6c4f8a7b4196007673)
 ![DASHBOARD](./powerBI/dashboard1.PNG)
-2. Rankofloan: ![DASHBOARD2](./powerBI/RANKED-LOAN DETAIL.PNG)
+![DASHBOARD2](./powerBI/RANKED-LOAN DETAIL.PNG)
 Note account trainer (snowflake):
 
 1. Account: longbv1, pass:123456
