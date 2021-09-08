@@ -10,26 +10,16 @@ Finance- We is trying to evaluate the a *consumer's creditworthiness* (based on 
 
 ## II. Working data
 
-Data is generated based on Python sript. The database (.csv flat files) will include:
-
+Data is generated based on Python script. The database (.csv flat files) will include:
 1. Address.csv
-
 	This file includes basics data for an address such as addressID, city, region.
-
 2. Job.csv
-
 	This file includes basics data for a job such as jobID, jobTitle, income_basic.
-
 3. Customer.csv
-
 	This file includes basics data for a job such as customerID, creditCard, limit, sex, firstname, lastname, date_of_birth, email, phone_Number, jobID, education, addressID.
-
 4. Employee.csv
-
 	This file includes basics data for an employee such as employeeID, name, date_of_birth, email, phone_Number, addressID.
-
 5. Transaction.csv
-
 	This file includes basics data for an transaction such as transactionID, startDate, endDate, percents, customerID, employeeID.
 
 ## III. Detail of work
@@ -45,9 +35,10 @@ Data is generated based on Python sript. The database (.csv flat files) will inc
     -  Design SSIS package to ETL the data
     -  Using SSIS pipe line load data to SQL Server (Fiance Database)
     -  Using SSIS stage data in SQL Server (stage)
-6. Load data onto Snowflake
-    -  Using SSIS load dimDate to Snowflake (1 times)
-    -  Using SSIS load data from SQL Server (stage) to Snowflake
+6. Upload and download data on Snowflake
+    -  Using SSIS: upload data and dimDate (auto generated) from SQL Server to Snowflake (schema: NDS)
+    -  Using Snowpipe: Python API put file to external stage, then create a pipeline to upload data continuously to Snowflake (to stage: Python_API_Stage)
+    -  Using python API to download dim fact tables in warehouse schema to local machine
 7. Visualize data using PowerBI
    - Connect Snowflake source
    - Visualize data
@@ -59,19 +50,17 @@ Data is generated based on Python sript. The database (.csv flat files) will inc
 3. In MSSQL, run [stage-sql-server.sql](./src/mssql/stage-sql-server.sql)
 4. Download and install ODBC Driver [here](https://sfc-repo.snowflakecomputing.com/odbc/win64/latest/index.html)
 5. Download and install Snowflake SSIS Component [here](https://www.cdata.com/drivers/snowflake/ssis)
-6. Authen and run SnowSQL [init_snowflake.sql](./src/snowflake/init_snowflake.sql)
-7. Open SSIS solution:
+6. Open SSIS solution:
    - Change variable logForder with your path that you want to log rows in ETL staging process
+   - Deploy environment on SSIS Solution link to SQL server
    - Run SSIS Solution
-8. Deploy environment on SSIS Solution link to SQL server
-9. Run job [job_evn.sql](./src/mssql/job_evn.sql)
-10. Install packages for python snowpipe
+7. Install packages for python snowpipe
    - Installing the Python SDK `pip install snowflake-ingest`
    - Installing Python connector:
      + Check for Python version: `python --version`
      + Install Python connector: `pip install snowflake-connector-python==<version>`
      + Example: `pip install snowflake-connector-python==3.9.6`
-12. Run snowpipe.py [snowpipe.py](./src/snowpipe/snowpipe.py)
+8. Run snowpipe.py [snowpipe.py](./src/snowpipe/snowpipe.py)
 
 ## V. Dashboard
 1. Overview : [here](https://app.powerbi.com/view?r=eyJrIjoiZmE0YTE4N2QtMTc3OC00MzJiLWJiZDQtYWE3NzE4YzE0ZTkzIiwidCI6ImYwMWU5MzBhLWI1MmUtNDJiMS1iNzBmLWE4ODgyYjVkMDQzYiIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
