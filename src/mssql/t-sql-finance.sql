@@ -1,4 +1,4 @@
---SET FINANCE DATABASE SQL
+--CREATE FINANCE DB
 IF DB_ID('FinanceDB') IS NOT NULL
 DROP DATABASE FinanceDB;
 go
@@ -71,7 +71,6 @@ CREATE TABLE Transactions
 			 CONSTRAINT FKcustomerID foreign key (customerID) references Customer(customerID),
 			 CONSTRAINT FKemployeeID foreign key (employeeID) references Employees(employeeID)
 );
---CREATE TABLE Transactions_Errors
 
 CREATE TABLE Transactions_Errors
 (
