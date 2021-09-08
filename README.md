@@ -81,8 +81,8 @@ Data is generated based on Python script. The database (.csv flat files) will in
 ## V. Dashboard
 1. Overview : [here](https://app.powerbi.com/view?r=eyJrIjoiMThmNjQ5N2MtZDYyMy00YzE2LThlNjctOWMzNGEzMGY3ZjAzIiwidCI6ImYwMWU5MzBhLWI1MmUtNDJiMS1iNzBmLWE4ODgyYjVkMDQzYiIsImMiOjEwfQ%3D%3D&pageName=ReportSectionfd6c4f8a7b4196007673)
 ![DASHBOARD](./powerBI/dashboard1.PNG)
+2. Rankofloan: [here](https://app.powerbi.com/view?r=eyJrIjoiMThmNjQ5N2MtZDYyMy00YzE2LThlNjctOWMzNGEzMGY3ZjAzIiwidCI6ImYwMWU5MzBhLWI1MmUtNDJiMS1iNzBmLWE4ODgyYjVkMDQzYiIsImMiOjEwfQ%3D%3D&pageName=ReportSectionfd6c4f8a7b4196007673)
 ![DASHBOARD2](https://github.com/matornat2812/Finance_Project/blob/master/powerBI/RANKED-LOAN%20DETAIL.PNG)
-2. Rankofloan: [hear](https://app.powerbi.com/view?r=eyJrIjoiMThmNjQ5N2MtZDYyMy00YzE2LThlNjctOWMzNGEzMGY3ZjAzIiwidCI6ImYwMWU5MzBhLWI1MmUtNDJiMS1iNzBmLWE4ODgyYjVkMDQzYiIsImMiOjEwfQ%3D%3D&pageName=ReportSectionfd6c4f8a7b4196007673)
 
 
 ### Note account trainer (snowflake):
