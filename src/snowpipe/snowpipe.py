@@ -22,17 +22,11 @@ def data_path():
     os.chdir("..")
     os.chdir("..")
     updata_path = os.getcwd() + "/resources/rawData/updata"
-    return updata_path, src_path
-
-
-def downdata():
-    os.makedirs("downdata", exist_ok=True)
     downdata_path = os.getcwd() + "/resources/rawData/downdata"
-    return downdata_path
+    return updata_path, src_path, downdata_path
 
 
-updata_path, src_path = data_path()
-downdata_path = downdata()
+updata_path, src_path, downdata_path = data_path()
 
 
 # Python API to execute snowsql command
