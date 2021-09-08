@@ -54,15 +54,24 @@ Data is generated based on Python sript. The database (.csv flat files) will inc
    -  Connect Power BI Desktop with Power BI Service
 
 ## IV. Set up
-1. Install Python package generates fake data: pip install Faker
+1. Install Python package generates fake data: `pip install Faker`
 2. Login into MSSQL and run [t-sql-finance.sql](./src/mssql/t-sql-finance.sql)
-3. In MSSQL  run [stage-sql-server.sql](./src/mssql/stage-sql-server.sql)
+3. In MSSQL, run [stage-sql-server.sql](./src/mssql/stage-sql-server.sql)
 4. Download and install ODBC Driver [here](https://sfc-repo.snowflakecomputing.com/odbc/win64/latest/index.html)
 5. Download and install Snowflake SSIS Component [here](https://www.cdata.com/drivers/snowflake/ssis)
 6. Authen and run SnowSQL [init_snowflake.sql](./src/snowflake/init_snowflake.sql)
 7. Open SSIS solution:
    - Change variable logForder with your path that you want to log rows in ETL staging process
    - Run SSIS Solution
+8. Deploy environment on SSIS Solution link to SQL server
+9. Run job [job_evn.sql](./src/mssql/job_evn.sql)
+10. Install packages for python snowpipe
+   - Installing the Python SDK `pip install snowflake-ingest`
+   - Installing Python connector:
+     + Check for Python version: `python --version`
+     + Install Python connector: `pip install snowflake-connector-python==<version>`
+     + Example: `pip install snowflake-connector-python==3.9.6`
+12. Run snowpipe.py [snowpipe.py](./src/snowpipe/snowpipe.py)
 
 ## V. Dashboard
 1. Overview : [here](https://app.powerbi.com/view?r=eyJrIjoiZmE0YTE4N2QtMTc3OC00MzJiLWJiZDQtYWE3NzE4YzE0ZTkzIiwidCI6ImYwMWU5MzBhLWI1MmUtNDJiMS1iNzBmLWE4ODgyYjVkMDQzYiIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
