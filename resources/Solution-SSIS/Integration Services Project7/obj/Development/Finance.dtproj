@@ -26,7 +26,11 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">CVP00204895A</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASoaKdvoht0O02tf7F/hc5AAAAAACAAAAAAADZgAAwAAAABAAAACwAFAj5bkNVU+gGyX2n5ucAAAAAASAAACgAAAAEAAAAK2LrRXjk77IliRM6edcr1eIAAAAmYGpMEQSy031P/nLO2KhEOMhXDtQqGzoE2xUd894BqlLVBxo3ebSEZF2zu0pSf8wm/vpUIjEA2uIJx4uy8uvtdkB2TYHe75iwkADSuXAdr76kXNYmVC4+RfCBNfGRZDurqVajmcD4BlUM0po63uPgzHjkaPcFS90/1MLiiWY7MZVDv2V+NabbRQAAACGydLBvcxr8v9FrrrepkeDNpwcyQ==</SSIS:Property>
+<<<<<<< HEAD:resources/Solution-SSIS/Integration Services Project7/Finance.dtproj
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASoaKdvoht0O02tf7F/hc5AAAAAACAAAAAAADZgAAwAAAABAAAABAyFEzw2f7W1D2nonIU/InAAAAAASAAACgAAAAEAAAANeu7vqyAy5hMWz6l+ND9a2IAAAAm2UEeOB+CpGmdupcDkba+4OIo5UEPeL8U3a6wr6kKEflAOf1O0X/ZBOoeV0x5cc9JfWSYu1VJyQJKtZmO9vQ/FBPlDYDqDdtM+JxI6uZETCCf6dpOpvz1IqAmT1GvCfWJnov3JalEL1bFfuAGu43Cxi0h/xAwhcBlgfHelu/6BkOoVJ42bOoWhQAAAA9IjVBTSfRWZxpk29EZlFKvX4fqw==</SSIS:Property>
+=======
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASoaKdvoht0O02tf7F/hc5AAAAAACAAAAAAADZgAAwAAAABAAAACxxae+QU33wFvYqD9N8ZwQAAAAAASAAACgAAAAEAAAAKMmi4sYSuMQWAjD+ALpER6IAAAAXHigQfaAoGCz61A+VKpHCsY3t9r9uywlgxXOq5OiUmm2XKforq1gIo9B3PiUPcq0gwjJ6K+hzMIWSMwm49i67F4pQqcDTCEJpSl6ZVfhC6O7FpFyFjZDD3xhV2g60fRQ3w/t39Sd2ASfWk1j6m1s4XuQnYax0GsE4Yr3KAf+PFCmTAFEEr4/XxQAAAClL1sCQid1ehs8IZ9ervlHl0RLcA==</SSIS:Property>
+>>>>>>> Nhat-put-data:resources/Solution-SSIS/Integration Services Project7/obj/Development/Finance.dtproj
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +46,17 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">344</SSIS:Property>
+<<<<<<< HEAD:resources/Solution-SSIS/Integration Services Project7/Finance.dtproj
+                <SSIS:Property SSIS:Name="VersionBuild">343</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{0C3680AB-FCF3-4C95-96EE-0A79CCBF7554}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7DCF7485-5E30-49C9-8FEC-633BF2238F30}</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="VersionBuild">347</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2A8C88AF-7BA9-4ED6-AE15-84827A617E8E}</SSIS:Property>
+>>>>>>> Nhat-put-data:resources/Solution-SSIS/Integration Services Project7/obj/Development/Finance.dtproj
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

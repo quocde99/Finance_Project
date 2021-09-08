@@ -9,7 +9,7 @@
         <WinAuthUserName />
         <WinAuthDomain />
         <ServerName>CVP00204895A\NHATKQ3FSOFT</ServerName>
-        <PathOnServer>/SSISDB/project 2/Project2</PathOnServer>
+        <PathOnServer>/SSISDB/Project 2/Finance</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

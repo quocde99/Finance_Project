@@ -12,8 +12,8 @@
   DTS:MaxErrorCount="1000"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="344"
-  DTS:VersionGUID="{0C3680AB-FCF3-4C95-96EE-0A79CCBF7554}">
+  DTS:VersionBuild="347"
+  DTS:VersionGUID="{2A8C88AF-7BA9-4ED6-AE15-84827A617E8E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -547,7 +547,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASoaKdvoht0O02tf7F/hc5AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABUqa/xLwEoRXiL+N9B6eAhAAAAAASAAACgAAAAEAAAAPZ8mjV2KqG/0J/BcHYKlAcYAAAA/todYujA9fBY3jTWTydAbCpjgazFwzz9FAAAAG5LnnH4X6LKx0iESU/dCejjC4JX</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAASoaKdvoht0O02tf7F/hc5AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACAKWQVygyguXkq371co1CsAAAAAASAAACgAAAAEAAAACg/0lFTEtanzuTAaE9917YYAAAAi+V+no4ofFMmbPZD404qAsDsu8bq06ZIFAAAADQdUGtBMgH3OtsKNFIpmiFS3Gmw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1564,9 +1564,8 @@
                         </inputColumn>
                         <inputColumn
                           refId="Package\Load to OLTP\Load Customer\Dedup.Inputs[Sort Input].Columns[fullname]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="wstr"
+                          cachedLength="101"
                           cachedName="fullname"
                           lineageId="Package\Load to OLTP\Load Customer\Fullname.Outputs[Derived Column Output].Columns[fullname]">
                           <properties>
@@ -8075,12 +8074,12 @@
                   version="1">
                   <components>
                     <component
-                      refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source"
+                      refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses"
                       componentClassID="Microsoft.FlatFileSource"
                       contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                       description="Flat File Source"
                       localeId="1033"
-                      name="Flat File Source"
+                      name="Flat File Addresses"
                       usesDispositions="true"
                       version="1">
                       <properties>
@@ -8095,25 +8094,25 @@
                       </properties>
                       <connections>
                         <connection
-                          refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Connections[FlatFileConnection]"
+                          refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Connections[FlatFileConnection]"
                           connectionManagerID="Package.ConnectionManagers[AddressCSV]"
                           connectionManagerRefId="Package.ConnectionManagers[AddressCSV]"
                           name="FlatFileConnection" />
                       </connections>
                       <outputs>
                         <output
-                          refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output]"
+                          refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output]"
                           name="Flat File Source Output">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[addressID]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[addressID]"
                               codePage="1252"
                               dataType="str"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[addressID]"
+                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].ExternalColumns[addressID]"
                               length="50"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[addressID]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[addressID]"
                               name="addressID"
                               truncationRowDisposition="FailComponent">
                               <properties>
@@ -8128,14 +8127,14 @@
                               </properties>
                             </outputColumn>
                             <outputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[city]"
                               codePage="1252"
                               dataType="str"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].ExternalColumns[city]"
                               length="50"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[city]"
                               name="city"
                               truncationRowDisposition="FailComponent">
                               <properties>
@@ -8150,14 +8149,14 @@
                               </properties>
                             </outputColumn>
                             <outputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[region]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[region]"
                               codePage="1252"
                               dataType="str"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[region]"
+                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].ExternalColumns[region]"
                               length="50"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[region]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[region]"
                               name="region"
                               truncationRowDisposition="FailComponent">
                               <properties>
@@ -8175,19 +8174,19 @@
                           <externalMetadataColumns
                             isUsed="True">
                             <externalMetadataColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[addressID]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].ExternalColumns[addressID]"
                               codePage="1252"
                               dataType="str"
                               length="50"
                               name="addressID" />
                             <externalMetadataColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[city]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].ExternalColumns[city]"
                               codePage="1252"
                               dataType="str"
                               length="50"
                               name="city" />
                             <externalMetadataColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[region]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].ExternalColumns[region]"
                               codePage="1252"
                               dataType="str"
                               length="50"
@@ -8195,27 +8194,27 @@
                           </externalMetadataColumns>
                         </output>
                         <output
-                          refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Error Output]"
+                          refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Error Output]"
                           isErrorOut="true"
                           name="Flat File Source Error Output">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                               codePage="1252"
                               dataType="text"
                               description="Flat File Source Error Output Column"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                               name="Flat File Source Error Output Column" />
                             <outputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                               dataType="i4"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                               name="ErrorCode"
                               specialFlags="1" />
                             <outputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                               dataType="i4"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                               name="ErrorColumn"
                               specialFlags="2" />
                           </outputColumns>
@@ -8224,11 +8223,11 @@
                       </outputs>
                     </component>
                     <component
-                      refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination"
+                      refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB"
                       componentClassID="Microsoft.OLEDBDestination"
                       contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                       description="OLE DB Destination"
-                      name="Insert Destination"
+                      name="Insert Addresses FinanceDB"
                       usesDispositions="true"
                       version="4">
                       <properties>
@@ -8281,7 +8280,7 @@
                       </properties>
                       <connections>
                         <connection
-                          refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Connections[OleDbConnection]"
+                          refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Connections[OleDbConnection]"
                           connectionManagerID="Package.ConnectionManagers[LocalHost.FinanceDB]"
                           connectionManagerRefId="Package.ConnectionManagers[LocalHost.FinanceDB]"
                           description="The OLE DB runtime connection used to access the database."
@@ -8289,49 +8288,49 @@
                       </connections>
                       <inputs>
                         <input
-                          refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input]"
+                          refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input]"
                           errorOrTruncationOperation="Insert"
                           errorRowDisposition="FailComponent"
                           hasSideEffects="true"
                           name="OLE DB Destination Input">
                           <inputColumns>
                             <inputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].Columns[Copy of addressID]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].Columns[Copy of addressID]"
                               cachedDataType="i4"
                               cachedName="Copy of addressID"
-                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[addressID]"
+                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].ExternalColumns[addressID]"
                               lineageId="Package\Load to OLTP\parallel\Load Addresses\Tranform addressID.Outputs[Data Conversion Output].Columns[Copy of addressID]" />
                             <inputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].Columns[city]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].Columns[city]"
                               cachedCodepage="1252"
                               cachedDataType="str"
                               cachedLength="50"
                               cachedName="city"
-                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[city]" />
+                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[city]" />
                             <inputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].Columns[region]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].Columns[region]"
                               cachedCodepage="1252"
                               cachedDataType="str"
                               cachedLength="50"
                               cachedName="region"
-                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[region]"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[region]" />
+                              externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].ExternalColumns[region]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[region]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
                             <externalMetadataColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[addressID]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].ExternalColumns[addressID]"
                               dataType="i4"
                               name="addressID" />
                             <externalMetadataColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                               codePage="1252"
                               dataType="str"
                               length="50"
                               name="city" />
                             <externalMetadataColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[region]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input].ExternalColumns[region]"
                               codePage="1252"
                               dataType="str"
                               length="50"
@@ -8341,22 +8340,22 @@
                       </inputs>
                       <outputs>
                         <output
-                          refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                          refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Outputs[OLE DB Destination Error Output]"
                           exclusionGroup="1"
                           isErrorOut="true"
                           name="OLE DB Destination Error Output"
-                          synchronousInputId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input]">
+                          synchronousInputId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input]">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                               dataType="i4"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                               name="ErrorCode"
                               specialFlags="1" />
                             <outputColumn
-                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              refId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                               dataType="i4"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                               name="ErrorColumn"
                               specialFlags="2" />
                           </outputColumns>
@@ -8417,7 +8416,7 @@
                               cachedLength="50"
                               cachedName="city"
                               externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[city]" />
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[city]" />
                             <inputColumn
                               refId="Package\Load to OLTP\parallel\Load Addresses\OLE DB Command.Inputs[OLE DB Command Input].Columns[region]"
                               cachedCodepage="1252"
@@ -8425,7 +8424,7 @@
                               cachedLength="50"
                               cachedName="region"
                               externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[region]" />
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[region]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -8581,7 +8580,7 @@
                               cachedLength="50"
                               cachedName="city"
                               externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[city]"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[city]">
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[city]">
                               <properties>
                                 <property
                                   dataType="System.Int32"
@@ -8596,7 +8595,7 @@
                               cachedLength="50"
                               cachedName="region"
                               externalMetadataColumnId="Package\Load to OLTP\parallel\Load Addresses\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[region]"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[region]">
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[region]">
                               <properties>
                                 <property
                                   dataType="System.Int32"
@@ -8695,7 +8694,7 @@
                               cachedDataType="str"
                               cachedLength="50"
                               cachedName="addressID"
-                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[addressID]" />
+                              lineageId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[addressID]" />
                           </inputColumns>
                           <externalMetadataColumns />
                         </input>
@@ -8720,7 +8719,7 @@
                                   containsID="true"
                                   dataType="System.Int32"
                                   description="Specifies the input column used as the source of data for the conversion."
-                                  name="SourceInputColumnLineageID">#{Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output].Columns[addressID]}</property>
+                                  name="SourceInputColumnLineageID">#{Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output].Columns[addressID]}</property>
                                 <property
                                   dataType="System.Boolean"
                                   description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -8770,10 +8769,10 @@
                       refId="Package\Load to OLTP\parallel\Load Addresses.Paths[Flat File Source Output]"
                       endId="Package\Load to OLTP\parallel\Load Addresses\Tranform addressID.Inputs[Data Conversion Input]"
                       name="Flat File Source Output"
-                      startId="Package\Load to OLTP\parallel\Load Addresses\Flat File Source.Outputs[Flat File Source Output]" />
+                      startId="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses.Outputs[Flat File Source Output]" />
                     <path
                       refId="Package\Load to OLTP\parallel\Load Addresses.Paths[New Output]"
-                      endId="Package\Load to OLTP\parallel\Load Addresses\Insert Destination.Inputs[OLE DB Destination Input]"
+                      endId="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB.Inputs[OLE DB Destination Input]"
                       name="New Output"
                       startId="Package\Load to OLTP\parallel\Load Addresses\Slowly Changing Dimension.Outputs[New Output]" />
                   </paths>
@@ -21545,6 +21544,181 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\SnowFlake\Load Fact\Snow fact new"
+                  componentClassID="Microsoft.SSISODBCDst"
+                  contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="ODBC Destination"
+                  name="Snow fact new"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName">"FinanceDatawarehouse"."FACTFINANCE"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">2000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of rows inserted under the same transaction."
+                      expressionType="Notify"
+                      name="TransactionSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                      expressionType="Notify"
+                      name="InsertMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SnowFlake\Load Fact\Snow fact new.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[project2.NhatLQ3]"
+                      connectionManagerRefId="Package.ConnectionManagers[project2.NhatLQ3]"
+                      description="The ODBC runtime connection used to access the database."
+                      name="ODBCConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ODBC Destination Input"
+                      truncationRowDisposition="FailComponent">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].Columns[transactionIDnew]"
+                          cachedDataType="numeric"
+                          cachedName="transactionIDnew"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[TRANSACTIONID]"
+                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[transactionIDnew]" />
+                        <inputColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].Columns[CUSTOMERKEY]"
+                          cachedDataType="numeric"
+                          cachedName="CUSTOMERKEY"
+                          cachedPrecision="38"
+                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[CUSTOMERKEY]"
+                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[CUSTOMERKEY]" />
+                        <inputColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].Columns[startDateKey]"
+                          cachedDataType="i4"
+                          cachedName="startDateKey"
+                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[STARTDATEKEY]"
+                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[startDateKey]" />
+                        <inputColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].Columns[endDateKeynew]"
+                          cachedDataType="numeric"
+                          cachedName="endDateKeynew"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[ENDDATEKEY]"
+                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[endDateKeynew]" />
+                        <inputColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].Columns[newloan]"
+                          cachedDataType="numeric"
+                          cachedName="newloan"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[LOAN]"
+                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[newloan]" />
+                        <inputColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].Columns[newscorePredict]"
+                          cachedDataType="numeric"
+                          cachedName="newscorePredict"
+                          cachedPrecision="15"
+                          cachedScale="1"
+                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[CREDITSCORE]"
+                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[newscorePredict]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[TRANSACTIONID]"
+                          dataType="numeric"
+                          name="TRANSACTIONID"
+                          precision="38" />
+                        <externalMetadataColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[CUSTOMERKEY]"
+                          dataType="numeric"
+                          name="CUSTOMERKEY"
+                          precision="38" />
+                        <externalMetadataColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[STARTDATEKEY]"
+                          dataType="numeric"
+                          name="STARTDATEKEY"
+                          precision="38" />
+                        <externalMetadataColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[ENDDATEKEY]"
+                          dataType="numeric"
+                          name="ENDDATEKEY"
+                          precision="38" />
+                        <externalMetadataColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[LOAN]"
+                          dataType="numeric"
+                          name="LOAN"
+                          precision="38" />
+                        <externalMetadataColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input].ExternalColumns[CREDITSCORE]"
+                          dataType="numeric"
+                          name="CREDITSCORE"
+                          precision="38" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SnowFlake\Load Fact\Snow fact new.Outputs[ODBC Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ODBC Destination Error Output"
+                      synchronousInputId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SnowFlake\Load Fact\Snow fact new.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SnowFlake\Load Fact\Snow fact new.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SnowFlake\Load Fact\Snow fact new.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\SnowFlake\Load Fact\Snow update fact"
                   componentClassID="Microsoft.SSISODBCDst"
                   contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -21719,121 +21893,6 @@
                       <externalMetadataColumns />
                     </output>
                   </outputs>
-                </component>
-                <component
-                  refId="Package\SnowFlake\Load Fact\Snow upload fact"
-                  componentClassID="Microsoft.FlatFileDestination"
-                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-                  description="Flat File Destination"
-                  localeId="1033"
-                  name="Snow upload fact"
-                  version="1">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      description="Specifies whether the data will overwrite or append to the destination file."
-                      name="Overwrite">true</property>
-                    <property
-                      dataType="System.Null"
-                      description="Specifies the text to write to the destination file before any data is written."
-                      expressionType="Notify"
-                      name="Header" />
-                    <property
-                      dataType="System.Boolean"
-                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                      name="EscapeQualifier">false</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\SnowFlake\Load Fact\Snow upload fact.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[SnowUPloadFact]"
-                      connectionManagerRefId="Package.ConnectionManagers[SnowUPloadFact]"
-                      name="FlatFileConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input]"
-                      hasSideEffects="true"
-                      name="Flat File Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].Columns[transactionIDnew]"
-                          cachedDataType="numeric"
-                          cachedName="transactionIDnew"
-                          cachedPrecision="18"
-                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[TRANSACTIONID]"
-                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[transactionIDnew]" />
-                        <inputColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].Columns[startDateKeynew]"
-                          cachedDataType="numeric"
-                          cachedName="startDateKeynew"
-                          cachedPrecision="18"
-                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[STARTDATEKEY]"
-                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[startDateKeynew]" />
-                        <inputColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].Columns[endDateKey]"
-                          cachedDataType="i4"
-                          cachedName="endDateKey"
-                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[ENDDATEKEY]"
-                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[endDateKey]" />
-                        <inputColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].Columns[CUSTOMERKEY]"
-                          cachedDataType="numeric"
-                          cachedName="CUSTOMERKEY"
-                          cachedPrecision="38"
-                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[CUSTOMERKEY]"
-                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[CUSTOMERKEY]" />
-                        <inputColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].Columns[newloan]"
-                          cachedDataType="numeric"
-                          cachedName="newloan"
-                          cachedPrecision="18"
-                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[LOAN]"
-                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[newloan]" />
-                        <inputColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].Columns[newscorePredict]"
-                          cachedDataType="numeric"
-                          cachedName="newscorePredict"
-                          cachedPrecision="15"
-                          cachedScale="1"
-                          externalMetadataColumnId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[CREDITSCORE]"
-                          lineageId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output].Columns[newscorePredict]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[TRANSACTIONID]"
-                          dataType="numeric"
-                          name="TRANSACTIONID"
-                          precision="38" />
-                        <externalMetadataColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[CUSTOMERKEY]"
-                          dataType="numeric"
-                          name="CUSTOMERKEY"
-                          precision="38" />
-                        <externalMetadataColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[STARTDATEKEY]"
-                          dataType="numeric"
-                          name="STARTDATEKEY"
-                          precision="38" />
-                        <externalMetadataColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[ENDDATEKEY]"
-                          dataType="numeric"
-                          name="ENDDATEKEY"
-                          precision="38" />
-                        <externalMetadataColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[LOAN]"
-                          dataType="numeric"
-                          name="LOAN"
-                          precision="38" />
-                        <externalMetadataColumn
-                          refId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input].ExternalColumns[CREDITSCORE]"
-                          dataType="numeric"
-                          name="CREDITSCORE"
-                          precision="38" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
                 </component>
                 <component
                   refId="Package\SnowFlake\Load Fact\Sort 1 fact"
@@ -23350,7 +23409,7 @@
                   startId="Package\SnowFlake\Load Fact\Merge Join 1 fact.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\SnowFlake\Load Fact.Paths[New]"
-                  endId="Package\SnowFlake\Load Fact\Snow upload fact.Inputs[Flat File Destination Input]"
+                  endId="Package\SnowFlake\Load Fact\Snow fact new.Inputs[ODBC Destination Input]"
                   name="New"
                   startId="Package\SnowFlake\Load Fact\Conditional Split fact.Outputs[New]" />
                 <path
@@ -27087,8 +27146,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="398,370"
-          Size="398,413"
+          PanelSize="398,414"
+          Size="398,457"
           Id="Package\Load to OLTP"
           TopLeft="95,755" />
         <NodeLayout
@@ -27389,24 +27448,36 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="375,224"
-          Size="375,267"
+          PanelSize="375,261"
+          Size="375,304"
           Id="Package\Stage SQL Server"
           TopLeft="533.166666997804,821.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="493,958.25">
+          TopLeft="493,961.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="40.166666997804,0"
+              EndConnector="40.166666997804,12"
               Start="0,0"
-              End="32.666666997804,0">
+              End="32.666666997804,12">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="32.666666997804,0" />
+                    End="16.083333498902,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.083333498902,0"
+                    Point2="20.083333498902,0"
+                    Point3="20.083333498902,4" />
+                  <mssgle:LineSegment
+                    End="20.083333498902,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.083333498902,8"
+                    Point2="20.083333498902,12"
+                    Point3="24.083333498902,12" />
+                  <mssgle:LineSegment
+                    End="32.666666997804,12" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27417,30 +27488,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="908.166666997804,955">
+          TopLeft="908.166666997804,970.861904772728">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="29.3333337969239,13.223809545456"
+              EndConnector="29.3333337969239,0"
               Start="0,0"
-              End="21.8333337969239,13.223809545456">
+              End="21.8333337969239,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="10.6666668984619,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.6666668984619,0"
-                    Point2="14.6666668984619,0"
-                    Point3="14.6666668984619,4" />
-                  <mssgle:LineSegment
-                    End="14.6666668984619,9.22380954545599" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.6666668984619,9.22380954545599"
-                    Point2="14.6666668984619,13.223809545456"
-                    Point3="18.6666668984619,13.223809545456" />
-                  <mssgle:LineSegment
-                    End="21.8333337969239,13.223809545456" />
+                    End="21.8333337969239,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27478,9 +27537,9 @@
           Id="Package\Load to OLTP\Load Customer\Sort 1"
           TopLeft="487,224" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Load to OLTP\Load Customer\OLE DB BDFInace"
-          TopLeft="944,424" />
+          Size="138,42"
+          Id="Package\Load to OLTP\Load Customer\TransformId"
+          TopLeft="244,161" />
         <NodeLayout
           Size="131,42"
           Id="Package\Load to OLTP\Load Customer\Error Load"
@@ -27494,9 +27553,9 @@
           Id="Package\Load to OLTP\Load Customer\Source Customer"
           TopLeft="460,61" />
         <NodeLayout
-          Size="138,42"
-          Id="Package\Load to OLTP\Load Customer\TransformId"
-          TopLeft="244,161" />
+          Size="173,42"
+          Id="Package\Load to OLTP\Load Customer\OLE DB Command"
+          TopLeft="495,438" />
         <NodeLayout
           Size="133,42"
           Id="Package\Load to OLTP\Load Customer\Merge Join"
@@ -27510,9 +27569,9 @@
           Id="Package\Load to OLTP\Load Customer\Customer"
           TopLeft="75,62" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\Load to OLTP\Load Customer\OLE DB Command"
-          TopLeft="495,438" />
+          Size="171,42"
+          Id="Package\Load to OLTP\Load Customer\OLE DB BDFInace"
+          TopLeft="944,424" />
         <EdgeLayout
           Id="Package\Load to OLTP\Load Customer.Paths[Data Conversion Output]"
           TopLeft="311.75,203">
@@ -27681,7 +27740,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="111.682623697917,24.0809464508095,20.4680859375,9.3974609375"
+              BoundingBox="111.682623697916,24.0809464508095,20.4680859375,9.3974609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -27791,19 +27850,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load to OLTP\Load Customer\OLE DB BDFInace">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load to OLTP\Load Customer\Error Load">
     <Properties>
       <Property>
@@ -27818,6 +27864,19 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load to OLTP\Load Customer\Source Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load to OLTP\Load Customer\OLE DB BDFInace">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -28173,7 +28232,7 @@
         <NodeLayout
           Size="165,42"
           Id="Package\Load to OLTP\Load Transaction\Error Value Insert"
-          TopLeft="991,297" />
+          TopLeft="851,411" />
         <NodeLayout
           Size="174,42"
           Id="Package\Load to OLTP\Load Transaction\Transform datatype"
@@ -28209,9 +28268,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28317,9 +28374,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28341,9 +28396,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28384,26 +28437,36 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load to OLTP\Load Transaction.Paths[Data Conversion Output1]"
-          TopLeft="872,316">
+          TopLeft="817,335">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="119,0"
+              EndConnector="116.5,76"
               Start="0,0"
-              End="111.5,0">
+              End="116.5,68.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="111.5,0" />
+                    End="0,26.8487084870849" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.8487084870849"
+                    Point2="0,30.8487084870849"
+                    Point3="4,30.8487084870849" />
+                  <mssgle:LineSegment
+                    End="112.5,30.8487084870849" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112.5,30.8487084870849"
+                    Point2="116.5,30.8487084870849"
+                    Point3="116.5,34.8487084870849" />
+                  <mssgle:LineSegment
+                    End="116.5,68.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28437,9 +28500,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28509,9 +28570,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28545,9 +28604,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28610,27 +28667,39 @@
           Id="Package\Load to OLTP\parallel\Load Addresses\Tranform addressID"
           TopLeft="229.5,109.5" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\Load to OLTP\parallel\Load Addresses\Insert Destination"
+          Size="219,42"
+          Id="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB"
           TopLeft="5.50000000000006,311.5" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Load to OLTP\parallel\Load Addresses\Flat File Source"
+          Size="173,42"
+          Id="Package\Load to OLTP\parallel\Load Addresses\Flat File Addresses"
           TopLeft="240,5.5" />
         <EdgeLayout
           Id="Package\Load to OLTP\parallel\Load Addresses.Paths[Flat File Source Output]"
-          TopLeft="318,47.5">
+          TopLeft="326.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,62"
+              EndConnector="-8.5,62"
               Start="0,0"
-              End="0,54.5">
+              End="-8.5,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5" />
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="-4,31" />
+                  <mssgle:LineSegment
+                    End="-4.5,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.5,31"
+                    Point2="-8.5,31"
+                    Point3="-8.5,35" />
+                  <mssgle:LineSegment
+                    End="-8.5,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -28691,9 +28760,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-195.333333333333,60"
+              EndConnector="-168.333333333333,60"
               Start="0,0"
-              End="-195.333333333333,52.5">
+              End="-168.333333333333,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -28704,20 +28773,20 @@
                     Point2="0,24.2647058823529"
                     Point3="-4,24.2647058823529" />
                   <mssgle:LineSegment
-                    End="-191.333333333333,24.2647058823529" />
+                    End="-164.333333333333,24.2647058823529" />
                   <mssgle:CubicBezierSegment
-                    Point1="-191.333333333333,24.2647058823529"
-                    Point2="-195.333333333333,24.2647058823529"
-                    Point3="-195.333333333333,28.2647058823529" />
+                    Point1="-164.333333333333,24.2647058823529"
+                    Point2="-168.333333333333,24.2647058823529"
+                    Point3="-168.333333333333,28.2647058823529" />
                   <mssgle:LineSegment
-                    End="-195.333333333333,52.5" />
+                    End="-168.333333333333,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-124.758053385417,29.2647058823529,54.1827734375,11.43359375"
+              BoundingBox="-111.258053385417,29.2647058823529,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -28774,7 +28843,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load to OLTP\parallel\Load Addresses\Insert Destination">
+    design-time-name="Package\Load to OLTP\parallel\Load Addresses\Insert Addresses FinanceDB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -30012,7 +30081,7 @@
         <NodeLayout
           Size="164,42"
           Id="Package\SnowFlake\Load Fact\Snow update fact"
-          TopLeft="587.8,432.4" />
+          TopLeft="576.8,433.4" />
         <NodeLayout
           Size="127,42"
           Id="Package\SnowFlake\Load Fact\Snow fact"
@@ -30038,10 +30107,6 @@
           Id="Package\SnowFlake\Load Fact\Source fact"
           TopLeft="60,114.2" />
         <NodeLayout
-          Size="163,42"
-          Id="Package\SnowFlake\Load Fact\Snow upload fact"
-          TopLeft="836,294" />
-        <NodeLayout
           Size="120,42"
           Id="Package\SnowFlake\Load Fact\Sort fact"
           TopLeft="436,117" />
@@ -30052,28 +30117,28 @@
         <NodeLayout
           Size="179,42"
           Id="Package\SnowFlake\Load Fact\Conditional Split fact"
-          TopLeft="581,298" />
+          TopLeft="590,298" />
         <EdgeLayout
           Id="Package\SnowFlake\Load Fact.Paths[UPDATE]"
-          TopLeft="670.15,340">
+          TopLeft="654.9,340">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,92.4"
+              EndConnector="0,93.4"
               Start="0,0"
-              End="0,84.9">
+              End="0,85.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,84.9" />
+                    End="0,85.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-18.66189453125,37.7390625,37.3237890625,9.421875"
+              BoundingBox="-18.66189453125,38.2390625,37.3237890625,9.421875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -30232,55 +30297,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SnowFlake\Load Fact.Paths[New]"
-          TopLeft="760,317">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76,0"
-              Start="0,0"
-              End="68.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="68.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="24.01595703125,5,20.4680859375,9.3974609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\SnowFlake\Load Fact.Paths[Merge Join Output1]"
-          TopLeft="680.5,242">
+          TopLeft="680,242">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-10,56"
+              EndConnector="0,56"
               Start="0,0"
-              End="-10,48.5">
+              End="0,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24"
-                    Point2="0,28"
-                    Point3="-4,28" />
-                  <mssgle:LineSegment
-                    End="-6,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6,28"
-                    Point2="-10,28"
-                    Point3="-10,32" />
-                  <mssgle:LineSegment
-                    End="-10,48.5" />
+                    End="0,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30331,6 +30360,46 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150,42"
+          Id="Package\SnowFlake\Load Fact\Snow fact new"
+          TopLeft="823,425" />
+        <EdgeLayout
+          Id="Package\SnowFlake\Load Fact.Paths[New]"
+          TopLeft="708,340">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="190,85"
+              Start="0,0"
+              End="190,77.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4518272425249" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.4518272425249"
+                    Point2="0,34.4518272425249"
+                    Point3="4,34.4518272425249" />
+                  <mssgle:LineSegment
+                    End="186,34.4518272425249" />
+                  <mssgle:CubicBezierSegment
+                    Point1="186,34.4518272425249"
+                    Point2="190,34.4518272425249"
+                    Point3="190,38.4518272425249" />
+                  <mssgle:LineSegment
+                    End="190,77.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="84.76595703125,39.4518272425249,20.4680859375,9.3974609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -30809,7 +30878,7 @@
     design-time-name="Package\Stage SQL Server\Load job to state">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="165,42"
           Id="Package\Stage SQL Server\Load job to state\Source Job Table"
@@ -30849,9 +30918,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -30996,6 +31063,19 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SnowFlake\Load Fact\Snow fact new">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
