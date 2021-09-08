@@ -58,6 +58,7 @@ Data is generated based on Python script. The database (.csv flat files) will in
 2. Download and install ODBC Driver [here](https://sfc-repo.snowflakecomputing.com/odbc/win64/latest/index.html)
 
 3. Set OBDC with DNS 32bit/64bit with information:
+
    ![image](https://user-images.githubusercontent.com/62283838/132566264-f14e4eff-4468-4034-a4bb-fdeeefb5c8ef.png)
 
 4. Run [main.py](.\resources\rawData\Object) to create fake data.
@@ -80,7 +81,7 @@ Data is generated based on Python script. The database (.csv flat files) will in
 ## V. Dashboard
 1. Overview : [here](https://app.powerbi.com/view?r=eyJrIjoiMThmNjQ5N2MtZDYyMy00YzE2LThlNjctOWMzNGEzMGY3ZjAzIiwidCI6ImYwMWU5MzBhLWI1MmUtNDJiMS1iNzBmLWE4ODgyYjVkMDQzYiIsImMiOjEwfQ%3D%3D&pageName=ReportSectionfd6c4f8a7b4196007673)
 ![DASHBOARD](./powerBI/dashboard1.PNG)
-
+2. Rankofloan: ![DASHBOARD2](./powerBI/RANKED-LOAN DETAIL.PNG)
 Note account trainer (snowflake):
 
 1. Account: longbv1, pass:123456
