@@ -1,12 +1,13 @@
 -- Set up Database
 USE ROLE SYSADMIN;
-create database FINANCEDW;
-use FINANCEDW;
-CREATE SCHEMA "FINANCEDW"."FinanceDatawarehouse";
-Use SCHEMA "FINANCEDW"."FinanceDatawarehouse";
+CREATE DATABASE IF NOT EXISTS FINANCEDW;
+USE FINANCEDW;
+
+CREATE SCHEMA IF NOT EXISTS "FINANCEDW"."FinanceDatawarehouse";
+USE SCHEMA "FINANCEDW"."FinanceDatawarehouse";
 -- set up table
 --DimJobs
-CREATE TABLE DimJobs (
+CREATE TABLE IF NOT EXISTS DimJobs (
 	JobsKey  int identity not null
 	-- attributes
 , 	jobID int not null
@@ -16,7 +17,7 @@ CREATE TABLE DimJobs (
 );
 
 --dimAddress
-CREATE TABLE DimAddresses (
+CREATE TABLE IF NOT EXISTS DimAddresses (
 	AddressesKey  int identity not null
 	-- attributes
 , 	addressID int not null
@@ -26,24 +27,26 @@ CREATE TABLE DimAddresses (
 );
 -- DimDate
 --Date Dimension
-CREATE TABLE DimDate(
-	DateKey int NOT NULL,
-	Date datetime NULL,
-	DayOfWeek int NOT NULL,
-	DayName nchar(10) NOT NULL,
-	DayOfMonth int NOT NULL,
-	DayOfYear int NOT NULL,
-	WeekOfYear int NOT NULL,
-	MonthName nchar(10) NOT NULL,
-	MonthOfYear int NOT NULL,
-	Quarter int NOT NULL,
-	Year int NOT NULL,
-	IsAWeekday varchar(1) NOT NULL DEFAULT (('N')),
-	CONSTRAINT PK_DimDate PRIMARY KEY (DateKey)
+CREATE TABLE IF NOT EXISTS DimDate(
+
+	DateKey int not  NULL primary key ,
+	TheDate Date not null ,
+	TheDay  int not null,
+	TheDayName  varchar(20) not null,
+	TheWeek  int not null ,
+	TheISOWeek int not null,
+	TheDayOfWeek  int not null,
+	TheMonth        int not null,
+	TheMonthName    varchar(20) not null,
+	TheQuarter      int not null,
+	TheYear         int not null,
+	TheFirstOfMonth date not null,
+	TheLastOfYear   date not null,
+	TheDayOfYear   int not null
 );
 
 --dim Customer
-CREATE TABLE DimCustomer (
+CREATE TABLE IF NOT EXISTS DimCustomer (
 	CustomerKey  int identity not null
 	-- attributes
 , 	customerID int not null
@@ -64,7 +67,7 @@ CREATE TABLE DimCustomer (
 );
 
 -- FactFinace
-CREATE TABLE FactFinance (
+CREATE TABLE IF NOT EXISTS FactFinance (
 	transactionID int not null
 ,	CustomerKey  int not null
 ,	startDateKey int not null
@@ -78,12 +81,12 @@ CREATE TABLE FactFinance (
 ,	CONSTRAINT FK_startDateKey FOREIGN KEY (startDateKey) REFERENCES DimDate (DateKey)
 ,	CONSTRAINT FK_endDateKey FOREIGN KEY (endDateKey) REFERENCES DimDate (DateKey)
 );
-create view Avg_Score
+CREATE VIEW IF NOT EXISTS Avg_Score
 as
 select C.CUSTOMERID, ROUND(avg(F.CREDITSCORE), 0) as Avg_Score
 from "FINANCEDW"."FinanceDatawarehouse"."FACTFINANCE" as F, "FINANCEDW"."FinanceDatawarehouse"."DIMCUSTOMER" as C
 where F.CUSTOMERKEY=C.CUSTOMERKEY
-group by C.CUSTOMERID
+group by C.CUSTOMERID;
 -- Create Trigger
 -- Set up Snowpipe
 -- Task
