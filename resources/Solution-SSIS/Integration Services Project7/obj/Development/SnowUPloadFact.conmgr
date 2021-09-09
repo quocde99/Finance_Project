@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SnowUPloadFact"
+  DTS:DTSID="{A649F5C0-FF78-4A9D-A479-2D59530E67EC}"
+  DTS:CreationName="FLATFILE">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[User::Updata]+"\\Finance,csv"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:Format="Delimited"
+      DTS:LocaleID="1033"
+      DTS:HeaderRowDelimiter="_x000D__x000A_"
+      DTS:RowDelimiter=""
+      DTS:TextQualifier="_x003C_none_x003E_"
+      DTS:CodePage="1252"
+      DTS:ConnectionString="C:\Users\NhatLQ3\Downloads\Finance_Project-master\Finance_Project-master\resources\rawData\updata\Finance,csv">
+      <DTS:FlatFileColumns>
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="131"
+          DTS:DataPrecision="38"
+          DTS:TextQualified="True"
+          DTS:ObjectName="TRANSACTIONID"
+          DTS:DTSID="{DE8A20D0-EBAC-4D79-A000-88091F98A991}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="131"
+          DTS:DataPrecision="38"
+          DTS:TextQualified="True"
+          DTS:ObjectName="CUSTOMERKEY"
+          DTS:DTSID="{ACB65B66-0255-45B0-B5E3-28CC4C6DAE38}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="131"
+          DTS:DataPrecision="38"
+          DTS:TextQualified="True"
+          DTS:ObjectName="STARTDATEKEY"
+          DTS:DTSID="{291823F6-D3AB-4E0B-A258-4C12B1B76813}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="131"
+          DTS:DataPrecision="38"
+          DTS:TextQualified="True"
+          DTS:ObjectName="ENDDATEKEY"
+          DTS:DTSID="{D20BF773-6350-45CF-AE6E-369627DFA802}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="131"
+          DTS:DataPrecision="38"
+          DTS:TextQualified="True"
+          DTS:ObjectName="LOAN"
+          DTS:DTSID="{ADAF3E1A-8482-44DA-81EE-EBB2E0A0E6AB}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x000D__x000A_"
+          DTS:DataType="131"
+          DTS:DataPrecision="38"
+          DTS:TextQualified="True"
+          DTS:ObjectName="CREDITSCORE"
+          DTS:DTSID="{1FDCE4A4-23AA-4D8C-9668-54EF35E324BE}"
+          DTS:CreationName="" />
+      </DTS:FlatFileColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
